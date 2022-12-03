@@ -73,7 +73,8 @@ function applyPromo() {
 
     if (promoText == 'nayan') {
         // console.log('applied');
-        totalProductCost = (totalProductCost * 90) / 100;
+        // 20% discount
+        totalProductCost = (totalProductCost * 80) / 100;
         // console.log(totalProductCost);
 
         let totalPrice = document.getElementById('total-price');
