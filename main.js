@@ -8,7 +8,7 @@ let extraMemoryCost = 0, extraStorageCost = 0, totaldDeliveryCost = 0;
 let totalProductCost = 1299;
 
 // optimized Code 
-document.getElementById('right-div').addEventListener('click', function (event){
+document.getElementById('right-div').addEventListener('click', function (event) {
     const extraMemory = document.getElementById('extra-memory');
     const extraStorage = document.getElementById('extra-storage');
     const deliveryCharge = document.getElementById('delivery-charge');
@@ -16,7 +16,7 @@ document.getElementById('right-div').addEventListener('click', function (event){
 
     const eventId = event.target.id;
 
-    switch(eventId){
+    switch (eventId) {
         case '8gb-memory':
             extraMemory.innerText = memory8gb;
             extraMemoryCost = memory8gb;
@@ -55,12 +55,12 @@ document.getElementById('right-div').addEventListener('click', function (event){
 });
 
 // Total product cost 
-function totalCost(){
+function totalCost() {
     let bestPriceText = document.getElementById('best-price');
     let bestPrice = parseFloat(bestPriceText.innerText);
 
 
-    totalProductCost  = bestPrice + extraMemoryCost + extraStorageCost + totaldDeliveryCost;
+    totalProductCost = bestPrice + extraMemoryCost + extraStorageCost + totaldDeliveryCost;
     // console.log(totalProductCost);
 
     document.getElementById('total-p-price').innerText = totalProductCost;
@@ -68,10 +68,10 @@ function totalCost(){
 
 
 // Total product cost after promo applied
-function applyPromo(){
+function applyPromo() {
     let promoText = document.getElementById('promo-text').value;
-    
-    if(promoText == 'stevekaku'){
+
+    if (promoText == 'nayan') {
         // console.log('applied');
         totalProductCost = (totalProductCost * 90) / 100;
         // console.log(totalProductCost);
